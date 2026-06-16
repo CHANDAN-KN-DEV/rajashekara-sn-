@@ -207,7 +207,7 @@ export const statistics = [
 ];
 
 export const certificationCategories = [
-  "All", "Conferences", "Workshops", "FDPs", "Webinars", "Awards"
+  "All", "Certifications", "Workshops", "Awards"
 ];
 
 export const navLinks = [

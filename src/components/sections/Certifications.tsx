@@ -8,18 +8,18 @@ import { X, ZoomIn, Award } from "lucide-react";
 
 // Placeholder certification cards with emoji icons since no real images are available
 const certifications = [
-  { id: 1, title: "ICLIS 2024 – Best Paper Award", category: "Awards", year: "2024", icon: "🏆", color: "from-amber-500/20 to-yellow-500/10" },
-  { id: 2, title: "ICLIS 2025 – Participation Certificate", category: "Conferences", year: "2025", icon: "🌍", color: "from-blue-500/20 to-blue-600/10" },
-  { id: 3, title: "Research Methodology Workshop", category: "Workshops", year: "2023", icon: "📊", color: "from-purple-500/20 to-purple-600/10" },
-  { id: 4, title: "NDLI Training Program", category: "FDPs", year: "2023", icon: "📚", color: "from-emerald-500/20 to-emerald-600/10" },
-  { id: 5, title: "DELNET Webinar Series", category: "Webinars", year: "2024", icon: "💻", color: "from-cyan-500/20 to-cyan-600/10" },
-  { id: 6, title: "Future of Libraries Conference", category: "Conferences", year: "2023", icon: "🔬", color: "from-rose-500/20 to-rose-600/10" },
-  { id: 7, title: "AI in Library Science FDP", category: "FDPs", year: "2024", icon: "🤖", color: "from-indigo-500/20 to-indigo-600/10" },
-  { id: 8, title: "KHSLA 2025 Conference", category: "Conferences", year: "2025", icon: "📜", color: "from-teal-500/20 to-teal-600/10" },
-  { id: 9, title: "World Poetry Day Conference", category: "Conferences", year: "2023", icon: "📝", color: "from-pink-500/20 to-pink-600/10" },
-  { id: 10, title: "Information Literacy Webinar", category: "Webinars", year: "2022", icon: "🌐", color: "from-orange-500/20 to-orange-600/10" },
-  { id: 11, title: "Library Automation Workshop", category: "Workshops", year: "2022", icon: "⚙️", color: "from-gray-500/20 to-gray-600/10" },
-  { id: 12, title: "Digital Resource Management FDP", category: "FDPs", year: "2022", icon: "🗄️", color: "from-violet-500/20 to-violet-600/10" },
+  { id: 1, title: "ICLIS 2024 – Best Paper Award", category: "Awards", year: "2024", icon: "🏆", color: "from-amber-500/20 to-yellow-500/10", issuer: "Jain University, Bengaluru" },
+  { id: 2, title: "LinkedIn Learning: Communication Skills", category: "Certifications", year: "2023", icon: "💬", color: "from-blue-500/20 to-blue-600/10", issuer: "LinkedIn Learning" },
+  { id: 3, title: "LinkedIn Learning: Leadership Development", category: "Certifications", year: "2023", icon: "🚀", color: "from-purple-500/20 to-purple-600/10", issuer: "LinkedIn Learning" },
+  { id: 4, title: "LinkedIn Learning: Digital Tools", category: "Certifications", year: "2023", icon: "💻", color: "from-emerald-500/20 to-emerald-600/10", issuer: "LinkedIn Learning" },
+  { id: 5, title: "LinkedIn Learning: Academic Support Systems", category: "Certifications", year: "2024", icon: "🎓", color: "from-cyan-500/20 to-cyan-600/10", issuer: "LinkedIn Learning" },
+  { id: 6, title: "Training: Library Automation & ILMS", category: "Workshops", year: "2022", icon: "⚙️", color: "from-rose-500/20 to-rose-600/10", issuer: "Professional Development" },
+  { id: 7, title: "Training: Digital Library Management", category: "Workshops", year: "2022", icon: "🗄️", color: "from-indigo-500/20 to-indigo-600/10", issuer: "Professional Development" },
+  { id: 8, title: "Training: Advanced Research Methodology", category: "Workshops", year: "2023", icon: "📊", color: "from-teal-500/20 to-teal-600/10", issuer: "Professional Development" },
+  { id: 9, title: "Training: Bibliometric & Scientometric Analysis", category: "Workshops", year: "2023", icon: "📈", color: "from-pink-500/20 to-pink-600/10", issuer: "Professional Development" },
+  { id: 10, title: "Training: Academic Database Searching & Discovery", category: "Workshops", year: "2023", icon: "🔍", color: "from-orange-500/20 to-orange-600/10", issuer: "Professional Development" },
+  { id: 11, title: "Training: Conducting Information Literacy Programs", category: "Workshops", year: "2024", icon: "📖", color: "from-gray-500/20 to-gray-600/10", issuer: "Professional Development" },
+  { id: 12, title: "Training: Artificial Intelligence Applications in Libraries", category: "Workshops", year: "2024", icon: "🤖", color: "from-violet-500/20 to-violet-600/10", issuer: "Professional Development" },
 ];
 
 type Cert = typeof certifications[0];
@@ -125,7 +125,8 @@ export function Certifications() {
               <h3 className="text-xl font-bold font-poppins text-gray-900 dark:text-white mb-2 leading-snug">
                 {selected.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm font-inter">Year: {selected.year}</p>
+              <p className="text-gray-900 dark:text-gray-100 text-sm font-semibold font-inter mb-1">Issuer: {selected.issuer}</p>
+              <p className="text-gray-600 dark:text-gray-400 text-xs font-inter">Year: {selected.year}</p>
 
               <div className="mt-6 flex items-center justify-center gap-2 text-sm text-gray-500 dark:text-gray-400">
                 <Award size={14} />
