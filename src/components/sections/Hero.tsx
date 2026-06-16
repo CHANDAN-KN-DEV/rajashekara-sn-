@@ -7,6 +7,7 @@ import { Download, Mail, ChevronDown } from "lucide-react";
 import { FiLinkedin } from "react-icons/fi";
 import { personalInfo } from "@/data/portfolio";
 import profilePic from "../../../public/profile.jpg";
+import { TiltCard } from "@/components/shared/TiltCard";
 
 const roles = [
   "Chief Librarian",
@@ -215,22 +216,25 @@ export function Hero() {
             </div>
 
             {/* Profile image container */}
-            <div className="relative z-10 float-animation">
+            <div className="relative z-10 float-animation" style={{ transformStyle: "preserve-3d" }}>
               {/* Glow bg */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary-500 to-secondary blur-2xl opacity-30 dark:opacity-20 scale-90" />
 
               {/* Image frame */}
-              <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
-                <div className="relative w-full h-full bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900/50 dark:to-primary-800/30 flex items-center justify-center">
+              <TiltCard className="relative w-56 h-56 md:w-72 md:h-72 rounded-full border-4 border-white dark:border-gray-800 shadow-2xl overflow-hidden" maxRotate={15}>
+                <div 
+                  className="relative w-full h-full bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900/50 dark:to-primary-800/30 flex items-center justify-center"
+                  style={{ transform: "translateZ(25px)", transformStyle: "preserve-3d" }}
+                >
                   <Image
                     src={profilePic}
                     alt="Mr. Rajashekara S N - Chief Librarian"
                     fill
-                    className="object-cover object-top"
+                    className="object-cover object-top scale-105"
                     priority
                   />
                 </div>
-              </div>
+              </TiltCard>
 
               {/* Floating info card */}
               <motion.div
@@ -238,6 +242,7 @@ export function Hero() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 1 }}
                 className="absolute -right-4 md:-right-8 top-6 glass rounded-2xl p-3 md:p-4 shadow-xl border border-white/30 dark:border-white/10"
+                style={{ transform: "translateZ(45px)" }}
               >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center text-lg">
@@ -255,6 +260,7 @@ export function Hero() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 1.2 }}
                 className="absolute -left-4 md:-left-10 bottom-10 glass rounded-2xl p-3 md:p-4 shadow-xl border border-white/30 dark:border-white/10"
+                style={{ transform: "translateZ(45px)" }}
               >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500/20 to-primary-500/10 flex items-center justify-center text-lg">

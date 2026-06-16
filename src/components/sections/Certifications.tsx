@@ -15,6 +15,7 @@ import certPoetry2025 from "../../../public/cert_poetry_2025.png";
 import certIprAppreciation from "../../../public/cert_ipr_appreciation_2025.png";
 import certIimb2025 from "../../../public/cert_iimb_2025.png";
 import certLibguide2024 from "../../../public/cert_libguide_2024.png";
+import { TiltCard } from "@/components/shared/TiltCard";
 
 // Placeholder certification cards with emoji icons since no real images are available
 const certifications = [
@@ -206,32 +207,50 @@ export function Certifications() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3, delay: i * 0.04 }}
                 onClick={() => setSelected(cert)}
-                className={`group relative p-5 rounded-2xl bg-gradient-to-br ${cert.color} border border-white/50 dark:border-gray-700/50 cursor-pointer hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden ${i % 3 === 0 ? "md:row-span-2" : ""}`}
+                className={`cursor-pointer ${i % 3 === 0 ? "md:row-span-2" : ""}`}
               >
-                {/* Hover zoom overlay */}
-                <div className="absolute inset-0 bg-primary-900/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-center justify-center">
-                  <ZoomIn size={24} className="text-white" />
-                </div>
-
-                {cert.image ? (
-                  <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-white/10 dark:border-gray-700/30 mb-3 shadow-inner bg-white">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={cert.image.src}
-                      alt={cert.title}
-                      className="w-full h-full object-cover object-top"
-                    />
+                <TiltCard
+                  className={`group relative h-full p-5 rounded-2xl bg-gradient-to-br ${cert.color} border border-white/50 dark:border-gray-700/50 hover:shadow-2xl transition-all duration-300 overflow-hidden`}
+                >
+                  {/* Hover zoom overlay */}
+                  <div className="absolute inset-0 bg-primary-900/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-center justify-center" style={{ transform: "translateZ(10px)" }}>
+                    <ZoomIn size={24} className="text-white" />
                   </div>
-                ) : (
-                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{cert.icon}</div>
-                )}
-                <h4 className="text-sm font-semibold font-poppins text-gray-900 dark:text-white leading-snug mb-2">
-                  {cert.title}
-                </h4>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-medium text-primary-600 dark:text-primary-400 font-inter">{cert.category}</span>
-                  <span className="text-xs text-gray-400 font-inter">{cert.year}</span>
-                </div>
+
+                  {cert.image ? (
+                    <div 
+                      className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-white/10 dark:border-gray-700/30 mb-3 shadow-inner bg-white"
+                      style={{ transform: "translateZ(30px)", transformStyle: "preserve-3d" }}
+                    >
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={cert.image.src}
+                        alt={cert.title}
+                        className="w-full h-full object-cover object-top"
+                      />
+                    </div>
+                  ) : (
+                    <div 
+                      className="text-4xl mb-3 group-hover:scale-110 transition-transform"
+                      style={{ transform: "translateZ(30px)" }}
+                    >
+                      {cert.icon}
+                    </div>
+                  )}
+                  <h4 
+                    className="text-sm font-semibold font-poppins text-gray-900 dark:text-white leading-snug mb-2"
+                    style={{ transform: "translateZ(20px)" }}
+                  >
+                    {cert.title}
+                  </h4>
+                  <div 
+                    className="flex items-center justify-between"
+                    style={{ transform: "translateZ(15px)" }}
+                  >
+                    <span className="text-xs font-medium text-primary-600 dark:text-primary-400 font-inter">{cert.category}</span>
+                    <span className="text-xs text-gray-400 font-inter">{cert.year}</span>
+                  </div>
+                </TiltCard>
               </motion.div>
             ))}
           </AnimatePresence>

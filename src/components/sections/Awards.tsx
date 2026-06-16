@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { awards } from "@/data/portfolio";
+import { TiltCard } from "@/components/shared/TiltCard";
 
 export function Awards() {
   return (
@@ -45,24 +46,30 @@ export function Awards() {
               {/* Glow effect */}
               <div className="absolute -inset-1 bg-gradient-to-r from-accent/50 to-amber-300/50 rounded-3xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-              <div className="relative p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
+              <TiltCard className="relative p-8 h-full rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300">
                 {/* Trophy icon */}
-                <div className="text-6xl mb-6 text-center group-hover:scale-110 transition-transform duration-300">
+                <div 
+                  className="text-6xl mb-6 text-center group-hover:scale-110 transition-transform duration-300"
+                  style={{ transform: "translateZ(40px)" }}
+                >
                   {award.icon}
                 </div>
 
                 {/* Badge */}
-                <div className="text-center mb-5">
+                <div className="text-center mb-5" style={{ transform: "translateZ(30px)" }}>
                   <span className="inline-block px-4 py-1.5 text-xs font-bold font-inter rounded-full bg-accent/20 border border-accent/40 text-amber-300 uppercase tracking-wider">
                     Best Paper Award
                   </span>
                 </div>
 
-                <h3 className="text-lg font-bold font-poppins text-white text-center mb-4 leading-snug">
+                <h3 
+                  className="text-lg font-bold font-poppins text-white text-center mb-4 leading-snug"
+                  style={{ transform: "translateZ(25px)" }}
+                >
                   &ldquo;{award.paper}&rdquo;
                 </h3>
 
-                <div className="space-y-2 text-center">
+                <div className="space-y-2 text-center" style={{ transform: "translateZ(20px)" }}>
                   <div className="flex items-center justify-center gap-2">
                     <span className="text-accent text-sm font-semibold">{award.conference}</span>
                   </div>
@@ -71,8 +78,8 @@ export function Awards() {
                 </div>
 
                 {/* Bottom accent line */}
-                <div className="mt-6 h-0.5 w-full rounded-full bg-gradient-to-r from-transparent via-accent to-transparent" />
-              </div>
+                <div className="mt-6 h-0.5 w-full rounded-full bg-gradient-to-r from-transparent via-accent to-transparent" style={{ transform: "translateZ(10px)" }} />
+              </TiltCard>
             </motion.div>
           ))}
 
