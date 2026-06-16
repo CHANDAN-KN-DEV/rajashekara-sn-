@@ -272,20 +272,21 @@ export function Hero() {
                   </div>
                 </div>
               </motion.div>
-            </div>
 
-            {/* Institution badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.4 }}
-              className="absolute bottom-0 left-1/2 -translate-x-1/2 glass rounded-2xl px-5 py-3 shadow-xl border border-white/30 dark:border-white/10 text-center min-w-48"
-            >
-              <p className="text-xs font-semibold font-poppins text-primary-700 dark:text-primary-300">
-                Jyothy Institute of Commerce
-              </p>
-              <p className="text-xs text-gray-500 dark:text-gray-400">&amp; Management, Bengaluru</p>
-            </motion.div>
+              {/* Institution badge */}
+              <motion.div
+                initial={{ opacity: 0, y: 20, x: "-50%" }}
+                animate={{ opacity: 1, y: 0, x: "-50%" }}
+                transition={{ duration: 0.6, delay: 1.4 }}
+                className="absolute -bottom-6 left-1/2 z-20 glass rounded-2xl px-5 py-3 shadow-xl border border-white/30 dark:border-white/10 text-center min-w-56"
+                style={{ z: 45 }}
+              >
+                <p className="text-xs font-semibold font-poppins text-primary-700 dark:text-primary-300 whitespace-nowrap">
+                  Jyothy Institute of Commerce
+                </p>
+                <p className="text-xs text-gray-500 dark:text-gray-400 whitespace-nowrap">&amp; Management, Bengaluru</p>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
 
