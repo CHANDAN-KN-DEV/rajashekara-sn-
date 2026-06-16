@@ -5,6 +5,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { certificationCategories } from "@/data/portfolio";
 import { X, ZoomIn, Award, ExternalLink } from "lucide-react";
+import certJainBestPaper from "../../../public/cert_jain_best_paper_2024.png";
+import certIclis2025 from "../../../public/cert_iclis_2025.png";
+import certJain2024 from "../../../public/cert_jain_2024.png";
+import certKhsla2025 from "../../../public/cert_khsla_2025.png";
+import certIsi2017 from "../../../public/cert_isi_2017.png";
+import certKle2023 from "../../../public/cert_kle_2023.png";
+import certPoetry2025 from "../../../public/cert_poetry_2025.png";
+import certIprAppreciation from "../../../public/cert_ipr_appreciation_2025.png";
+import certIimb2025 from "../../../public/cert_iimb_2025.png";
+import certLibguide2024 from "../../../public/cert_libguide_2024.png";
 
 // Placeholder certification cards with emoji icons since no real images are available
 const certifications = [
@@ -16,7 +26,7 @@ const certifications = [
     icon: "🏆", 
     color: "from-amber-500/20 to-yellow-500/10", 
     issuer: "Jain University & Karnataka State Library Association (KALA)", 
-    image: "/cert_jain_best_paper_2024.png" 
+    image: certJainBestPaper 
   },
   { 
     id: 2, 
@@ -26,7 +36,7 @@ const certifications = [
     icon: "📜", 
     color: "from-blue-500/20 to-blue-600/10", 
     issuer: "Sri Lanka Library Association & University of Peradeniya", 
-    image: "/cert_iclis_2025.png" 
+    image: certIclis2025 
   },
   { 
     id: 3, 
@@ -36,7 +46,7 @@ const certifications = [
     icon: "📝", 
     color: "from-purple-500/20 to-purple-600/10", 
     issuer: "Jain University & KALA", 
-    image: "/cert_jain_2024.png" 
+    image: certJain2024 
   },
   { 
     id: 4, 
@@ -46,7 +56,7 @@ const certifications = [
     icon: "📊", 
     color: "from-teal-500/20 to-teal-600/10", 
     issuer: "Karnataka Health Sciences Library Association", 
-    image: "/cert_khsla_2025.png" 
+    image: certKhsla2025 
   },
   { 
     id: 5, 
@@ -56,7 +66,7 @@ const certifications = [
     icon: "📚", 
     color: "from-rose-500/20 to-rose-600/10", 
     issuer: "Indian Statistical Institute, DRTC, Bangalore", 
-    image: "/cert_isi_2017.png" 
+    image: certIsi2017 
   },
   { 
     id: 6, 
@@ -66,7 +76,7 @@ const certifications = [
     icon: "🏫", 
     color: "from-orange-500/20 to-orange-600/10", 
     issuer: "KLE Society's Degree College & Bangalore University", 
-    image: "/cert_kle_2023.png" 
+    image: certKle2023 
   },
   { 
     id: 7, 
@@ -76,7 +86,7 @@ const certifications = [
     icon: "✍️", 
     color: "from-gray-500/20 to-gray-600/10", 
     issuer: "Jyothy Institute of Commerce and Management", 
-    image: "/cert_poetry_2025.png" 
+    image: certPoetry2025 
   },
   { 
     id: 8, 
@@ -86,7 +96,7 @@ const certifications = [
     icon: "⚖️", 
     color: "from-pink-500/20 to-pink-600/10", 
     issuer: "Jyothy Institute of Commerce and Management & WEGROW", 
-    image: "/cert_ipr_appreciation_2025.png" 
+    image: certIprAppreciation 
   },
   { 
     id: 9, 
@@ -96,7 +106,7 @@ const certifications = [
     icon: "🏛️", 
     color: "from-indigo-500/20 to-indigo-600/10", 
     issuer: "Indian Institute of Management Bangalore", 
-    image: "/cert_iimb_2025.png" 
+    image: certIimb2025 
   },
   { 
     id: 10, 
@@ -106,7 +116,7 @@ const certifications = [
     icon: "🛠️", 
     color: "from-cyan-500/20 to-cyan-600/10", 
     issuer: "Librarian Guide", 
-    image: "/cert_libguide_2024.png" 
+    image: certLibguide2024 
   },
   { 
     id: 11, 
@@ -207,7 +217,7 @@ export function Certifications() {
                   <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-white/10 dark:border-gray-700/30 mb-3 shadow-inner bg-white">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={cert.image}
+                      src={cert.image.src}
                       alt={cert.title}
                       className="w-full h-full object-cover object-top"
                     />
@@ -257,7 +267,7 @@ export function Certifications() {
                 <div className="relative w-full aspect-[4/3] mb-6 rounded-xl overflow-hidden border border-white/10 dark:border-gray-800/20 shadow-md bg-white">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={selected.image}
+                    src={selected.image.src}
                     alt={selected.title}
                     className="w-full h-full object-contain"
                   />
