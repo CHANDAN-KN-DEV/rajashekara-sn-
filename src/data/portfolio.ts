@@ -153,10 +153,45 @@ export const awards = [
 ];
 
 export const conferences = [
-  { id: 1, name: "ICLIS 2025", location: "Sri Lanka", year: "2025", type: "International", role: "Presenter" },
-  { id: 2, name: "ICLIS 2024", location: "Bengaluru, India", year: "2024", type: "International", role: "Presenter" },
-  { id: 3, name: "International Conference on Future of Libraries", location: "DRTC, Indian Statistical Institute", year: "2017", type: "International", role: "Presenter" },
-  { id: 4, name: "KHSLA 2025 Conference", location: "Karnataka", year: "2025", type: "National", role: "Presenter" },
+  { 
+    id: 1, 
+    name: "ICLIS 2025", 
+    location: "Sri Lanka", 
+    year: "2025", 
+    type: "International", 
+    role: "Presenter",
+    presentedPaper: "Artificial Intelligence Research Visibility as Reflected in the Web of Science: A Scientometric Approach"
+  },
+  { 
+    id: 2, 
+    name: "ICLIS 2024", 
+    location: "Bengaluru, India", 
+    year: "2024", 
+    type: "International", 
+    role: "Presenter",
+    presentedPaper: "Navigating Scholarly Literature with ResearchRabbit: A Comprehensive Review (Awarded Best Paper)"
+  },
+  { 
+    id: 3, 
+    name: "International Conference on Future of Libraries", 
+    location: "DRTC, Indian Statistical Institute", 
+    year: "2017", 
+    type: "International", 
+    role: "Presenter",
+    presentedPapers: [
+      "Authorship Pattern and Collaborative Research in the field of Information Literacy",
+      "Computation of Growth Pattern of Information Literacy Literature, 1981–2015 as Reflected in LISA"
+    ]
+  },
+  { 
+    id: 4, 
+    name: "KHSLA 2025 Conference", 
+    location: "Karnataka", 
+    year: "2025", 
+    type: "National", 
+    role: "Presenter",
+    presentedPaper: "Smart Libraries in S R Patil Medical College, Hospital and Research Centre: Concept and Processes, and Library Automation and OPAC"
+  },
   { id: 5, name: "International Conference on World Poetry Day", location: "Bengaluru, India", year: "2023", type: "International", role: "Participant" },
   { id: 6, name: "Faculty Development Programs", location: "Various Institutions", year: "2022–2025", type: "Professional", role: "Participant" },
   { id: 7, name: "Research Methodology Workshops", location: "Bengaluru, India", year: "2022–2025", type: "Workshop", role: "Resource Person" },
