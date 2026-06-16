@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import achieverPoster1 from "../../public/achiever_poster_1.png";
+import achieverPoster2 from "../../public/achiever_poster_2.png";
 import { Navbar } from "@/components/layout/Navbar";
 import { GreetingToast } from "@/components/shared/GreetingToast";
 import { ScrollProgressBar } from "@/components/shared/ScrollProgressBar";
@@ -26,7 +28,7 @@ import { Contact } from "@/components/sections/Contact";
 function Loader({ onComplete }: { onComplete: () => void }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [timeLeft, setTimeLeft] = useState(15);
-  const slides = ["/achiever_poster_1.png", "/achiever_poster_2.png"];
+  const slides = [achieverPoster1.src, achieverPoster2.src];
 
   // Countdown timer
   useEffect(() => {
