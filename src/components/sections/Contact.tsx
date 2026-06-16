@@ -19,13 +19,23 @@ export function Contact() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const onSubmit = async (_data: FormData) => {
+  const onSubmit = (data: FormData) => {
     setStatus("sending");
-    await new Promise((r) => setTimeout(r, 1800));
+
+    const recipientEmail = "rajashekarasn1994@gmail.com";
+    const subject = encodeURIComponent(
+      data.subject || `Portfolio Contact: Message from ${data.name}`
+    );
+    const body = encodeURIComponent(
+      `Name: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
+    );
+
+    // Open the visitor's email client pre-filled with the form data
+    window.open(`mailto:${recipientEmail}?subject=${subject}&body=${body}`, "_blank");
+
     setStatus("sent");
     reset();
-    setTimeout(() => setStatus("idle"), 4000);
+    setTimeout(() => setStatus("idle"), 5000);
   };
 
   const contactItems = [

@@ -4,7 +4,7 @@ export const personalInfo = {
   title: "Chief Librarian",
   institution: "Jyothy Institute of Commerce and Management",
   location: "Bengaluru, Karnataka, India",
-  email: "librarian@jyothyjicm.org",
+  email: "rajashekarasn1994@gmail.com",
   linkedin: "linkedin.com/in/rajashekarasn",
   linkedinUrl: "https://linkedin.com/in/rajashekarasn",
   yearsOfExperience: "9+",
