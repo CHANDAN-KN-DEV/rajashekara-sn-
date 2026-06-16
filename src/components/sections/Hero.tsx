@@ -134,7 +134,7 @@ export function Hero() {
               className="flex flex-wrap gap-4 mb-10"
             >
               <a
-                href="/cv.pdf"
+                href="rajashekara_Resumne.pdf"
                 download
                 className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-primary-900 to-secondary text-white font-semibold font-inter shadow-lg hover:shadow-glow transition-all duration-300 hover:scale-105 active:scale-95"
               >

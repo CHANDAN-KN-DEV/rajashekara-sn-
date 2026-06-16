@@ -97,7 +97,7 @@ export function Navbar() {
             <div className="flex items-center gap-2">
               <ThemeToggle />
               <a
-                href="/cv.pdf"
+                href="rajashekara_Resumne.pdf"
                 download
                 className="hidden md:inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold font-inter rounded-lg bg-gradient-to-r from-primary-900 to-secondary text-white hover:opacity-90 transition-opacity shadow-md hover:shadow-glow"
               >
@@ -165,7 +165,7 @@ export function Navbar() {
               </nav>
               <div className="p-5 border-t border-gray-100 dark:border-gray-800">
                 <a
-                  href="/cv.pdf"
+                  href="rajashekara_Resumne.pdf"
                   download
                   className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold font-inter rounded-xl bg-gradient-to-r from-primary-900 to-secondary text-white"
                 >
