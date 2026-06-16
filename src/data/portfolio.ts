@@ -7,12 +7,12 @@ export const personalInfo = {
   email: "librarian@jyothyjicm.org",
   linkedin: "linkedin.com/in/rajashekarasn",
   linkedinUrl: "https://linkedin.com/in/rajashekarasn",
-  yearsOfExperience: "8+",
+  yearsOfExperience: "9+",
   tagline: "Library & Information Science Professional",
-  bio: "Dedicated Library and Information Science professional with over 8 years of experience in academic institutions. Currently serving as Chief Librarian at Jyothy Institute of Commerce and Management, Bengaluru. Experienced in library modernization, digital resource management, research support, information literacy, and academic resource development.",
+  bio: "Dedicated Library and Information Science professional with over 9 years of experience in academic institutions. Currently serving as Chief Librarian at Jyothy Institute of Commerce and Management, Bengaluru. Experienced in library modernization, digital resource management, research support, information literacy, and academic resource development.",
   highlights: [
     { icon: "🎓", label: "Master of Science in Library & Information Science" },
-    { icon: "📅", label: "8+ Years Professional Experience" },
+    { icon: "📅", label: "9+ Years Professional Experience" },
     { icon: "🔬", label: "Research Support Specialist" },
     { icon: "💻", label: "Digital Library Management" },
     { icon: "📊", label: "Scientometrics & Bibliometrics Research" },
@@ -199,7 +199,7 @@ export const skills = [
 ];
 
 export const statistics = [
-  { id: 1, value: 8, suffix: "+", label: "Years Experience", icon: "📅" },
+  { id: 1, value: 9, suffix: "+", label: "Years Experience", icon: "📅" },
   { id: 2, value: 5, suffix: "+", label: "Research Publications", icon: "📄" },
   { id: 3, value: 20, suffix: "+", label: "Conferences & Workshops", icon: "🎤" },
   { id: 4, value: 15, suffix: "+", label: "Certifications", icon: "🏅" },

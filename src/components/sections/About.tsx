@@ -9,7 +9,7 @@ import profilePic from "../../../public/profile.jpg";
 
 const highlights = [
   { icon: "🎓", label: "Master of Science in Library & Information Science" },
-  { icon: "📅", label: "8+ Years Professional Experience" },
+  { icon: "📅", label: "9+ Years Professional Experience" },
   { icon: "🔬", label: "Research Support Specialist" },
   { icon: "💻", label: "Digital Library Management" },
   { icon: "📊", label: "Scientometrics & Bibliometrics Research" },
@@ -62,7 +62,7 @@ export function About() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="absolute -right-4 lg:-right-8 top-1/2 -translate-y-1/2 glass rounded-2xl p-4 shadow-xl border border-white/30 dark:border-white/10 text-center"
             >
-              <p className="text-4xl font-black font-poppins gradient-text">8+</p>
+              <p className="text-4xl font-black font-poppins gradient-text">9+</p>
               <p className="text-xs text-gray-600 dark:text-gray-300 font-inter leading-tight">Years of<br/>Experience</p>
             </motion.div>
           </motion.div>

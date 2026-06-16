@@ -19,7 +19,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Mr. Rajashekara S N | Chief Librarian – Jyothy Institute",
   description:
-    "Academic portfolio of Mr. Rajashekara S N, Chief Librarian at Jyothy Institute of Commerce and Management, Bengaluru. Library & Information Science professional with 8+ years of experience.",
+    "Academic portfolio of Mr. Rajashekara S N, Chief Librarian at Jyothy Institute of Commerce and Management, Bengaluru. Library & Information Science professional with 9+ years of experience.",
   keywords: [
     "Rajashekara S N",
     "Chief Librarian",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mr. Rajashekara S N | Chief Librarian",
     description:
-      "Library & Information Science professional with 8+ years of academic library experience.",
+      "Library & Information Science professional with 9+ years of academic library experience.",
     type: "website",
   },
   robots: { index: true, follow: true },

@@ -36,7 +36,7 @@ export function Skills() {
           subtitle="Expertise"
           title="My"
           highlight="Skills"
-          description="Technical and professional competencies built over 8+ years in academic libraries."
+          description="Technical and professional competencies built over 9+ years in academic libraries."
         />
 
         {/* Category Filter */}

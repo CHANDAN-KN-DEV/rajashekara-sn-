@@ -122,8 +122,8 @@ export function Hero() {
               className="text-base md:text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed max-w-xl"
             >
               Library &amp; Information Science Professional with{" "}
-              <strong className="text-primary-700 dark:text-primary-300">8+ years</strong> of experience at{" "}
-              <strong className="text-primary-700 dark:text-primary-300">Jyothy Institute of Commerce &amp; Management</strong>, Bengaluru.
+              <strong className="text-primary-700 dark:text-primary-300">9+ years</strong> of experience.
+    
             </motion.p>
 
             {/* CTA Buttons */}
@@ -184,7 +184,7 @@ export function Hero() {
               className="mt-10 flex gap-8 border-t border-gray-200 dark:border-gray-800 pt-8"
             >
               {[
-                { value: "8+", label: "Years Exp." },
+                { value: "9+", label: "Years Exp." },
                 { value: "5+", label: "Publications" },
                 { value: "1000+", label: "Students" },
               ].map((stat) => (
