@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Download, Mail, ChevronDown } from "lucide-react";
 import { FiLinkedin } from "react-icons/fi";
 import { personalInfo } from "@/data/portfolio";
+import profilePic from "../../../public/profile.jpg";
 
 const roles = [
   "Chief Librarian",
@@ -222,7 +223,7 @@ export function Hero() {
               <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
                 <div className="relative w-full h-full bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900/50 dark:to-primary-800/30 flex items-center justify-center">
                   <Image
-                    src="/profile.jpg"
+                    src={profilePic}
                     alt="Mr. Rajashekara S N - Chief Librarian"
                     fill
                     className="object-cover object-top"

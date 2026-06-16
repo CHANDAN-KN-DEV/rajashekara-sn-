@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { personalInfo } from "@/data/portfolio";
+import profilePic from "../../../public/profile.jpg";
 
 
 const highlights = [
@@ -36,7 +37,7 @@ export function About() {
           >
             <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] max-w-sm mx-auto lg:mx-0">
               <Image
-                src="/profile.jpg"
+                src={profilePic}
                 alt="Mr. Rajashekara S N"
                 fill
                 className="object-cover object-top"
