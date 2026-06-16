@@ -149,20 +149,24 @@ export function Publications() {
                       <div className="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700/50">
                         {pub.doi ? (
                           <p className="text-xs text-gray-400 font-inter">DOI: {pub.doi}</p>
+                        ) : pub.isbn ? (
+                          <p className="text-xs text-gray-400 font-inter">ISBN: {pub.isbn}</p>
                         ) : (
                           <p className="text-xs text-gray-400 font-inter italic">
-                            {pub.type === "Book Chapter" ? "ISBN available on request" : "DOI available on request"}
+                            {pub.type === "Book Chapter" || pub.type === "Conference Paper" ? "ISBN available on request" : "DOI available on request"}
                           </p>
                         )}
-                        <a
-                          href="https://www.linkedin.com/in/rajashekarasn/recent-activity/images/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-1.5 text-xs font-semibold font-inter text-primary-700 dark:text-primary-400 hover:text-primary-900 dark:hover:text-primary-200 transition-colors group/btn"
-                        >
-                          View Publication
-                          <ExternalLink size={12} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
-                        </a>
+                        {pub.link && (
+                          <a
+                            href={pub.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1.5 text-xs font-semibold font-inter text-primary-700 dark:text-primary-400 hover:text-primary-900 dark:hover:text-primary-200 transition-colors group/btn"
+                          >
+                            View Publication
+                            <ExternalLink size={12} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                          </a>
+                        )}
                       </div>
                     </motion.article>
                   ))}

@@ -13,6 +13,7 @@ interface Publication {
   isbn?: string;
   description: string;
   tags: string[];
+  link?: string;
 }
 
 interface BookshelfProps {
@@ -258,7 +259,7 @@ export function Bookshelf({ publications }: BookshelfProps) {
                         </p>
                       ) : (
                         <p className="text-xs text-gray-400 dark:text-gray-500 italic">
-                          {selectedBook.type === "Book Chapter" ? "ISBN available on request" : "DOI available on request"}
+                          {selectedBook.type === "Book Chapter" || selectedBook.type === "Conference Paper" ? "ISBN available on request" : "DOI available on request"}
                         </p>
                       )}
                     </div>
@@ -292,16 +293,18 @@ export function Bookshelf({ publications }: BookshelfProps) {
                     >
                       Close Details
                     </button>
-                    <a
-                      href="https://www.linkedin.com/in/rajashekarasn/recent-activity/images/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-gradient-to-r from-primary-900 to-secondary hover:from-primary-950 hover:to-blue-700 text-white text-sm font-semibold flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20 transition-all hover:-translate-y-0.5"
-                    >
-                      <BookOpen size={16} />
-                      Read Publication
-                      <ExternalLink size={14} />
-                    </a>
+                    {selectedBook.link && (
+                      <a
+                        href={selectedBook.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-gradient-to-r from-primary-900 to-secondary hover:from-primary-950 hover:to-blue-700 text-white text-sm font-semibold flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20 transition-all hover:-translate-y-0.5"
+                      >
+                        <BookOpen size={16} />
+                        Read Publication
+                        <ExternalLink size={14} />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
