@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { certificationCategories } from "@/data/portfolio";
-import { X, ZoomIn, Award } from "lucide-react";
+import { X, ZoomIn, Award, ExternalLink } from "lucide-react";
 
 // Placeholder certification cards with emoji icons since no real images are available
 const certifications = [
@@ -127,6 +127,16 @@ export function Certifications() {
               </h3>
               <p className="text-gray-900 dark:text-gray-100 text-sm font-semibold font-inter mb-1">Issuer: {selected.issuer}</p>
               <p className="text-gray-600 dark:text-gray-400 text-xs font-inter">Year: {selected.year}</p>
+
+              <a
+                href="https://www.linkedin.com/in/rajashekarasn/recent-activity/images/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex items-center justify-center gap-2 w-full px-4 py-2.5 text-xs font-bold font-inter rounded-xl bg-gradient-to-r from-primary-900 to-secondary text-white hover:opacity-90 transition-opacity"
+              >
+                <span>Verify on LinkedIn</span>
+                <ExternalLink size={12} />
+              </a>
 
               <div className="mt-6 flex items-center justify-center gap-2 text-sm text-gray-500 dark:text-gray-400">
                 <Award size={14} />
