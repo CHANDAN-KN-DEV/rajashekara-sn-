@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
+import { GreetingToast } from "@/components/shared/GreetingToast";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
@@ -91,6 +92,7 @@ export default function Home() {
           transition={{ duration: 0.5 }}
         >
           <Navbar />
+          <GreetingToast />
           <main>
             <Hero />
             <About />
