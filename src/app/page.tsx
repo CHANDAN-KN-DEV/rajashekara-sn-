@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
 import { GreetingToast } from "@/components/shared/GreetingToast";
+import { ScrollProgressBar } from "@/components/shared/ScrollProgressBar";
+import { BackToTop } from "@/components/shared/BackToTop";
+import { CursorSpotlight } from "@/components/shared/CursorSpotlight";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
@@ -83,6 +86,9 @@ export default function Home() {
 
   return (
     <>
+      <ScrollProgressBar />
+      <BackToTop />
+      <CursorSpotlight />
       <AnimatePresence>{loading && <Loader />}</AnimatePresence>
 
       {!loading && (

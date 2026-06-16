@@ -8,6 +8,7 @@ import { FiLinkedin } from "react-icons/fi";
 import { personalInfo } from "@/data/portfolio";
 import profilePic from "../../../public/profile.jpg";
 import { TiltCard } from "@/components/shared/TiltCard";
+import { ParticleCanvas } from "@/components/shared/ParticleCanvas";
 
 const roles = [
   "Chief Librarian",
@@ -76,6 +77,8 @@ export function Hero() {
         <div className="absolute -top-32 -left-32 w-96 h-96 bg-primary-200/40 dark:bg-primary-900/20 rounded-full blur-3xl animate-pulse" />
         <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-accent/20 dark:bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-secondary/10 dark:bg-secondary/5 rounded-full blur-3xl" />
+        {/* Constellation particles */}
+        <ParticleCanvas />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
