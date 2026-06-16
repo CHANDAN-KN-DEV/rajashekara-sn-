@@ -8,18 +8,142 @@ import { X, ZoomIn, Award, ExternalLink } from "lucide-react";
 
 // Placeholder certification cards with emoji icons since no real images are available
 const certifications = [
-  { id: 1, title: "ICLIS 2024 – Best Paper Award", category: "Awards", year: "2024", icon: "🏆", color: "from-amber-500/20 to-yellow-500/10", issuer: "Jain University, Bengaluru" },
-  { id: 2, title: "LinkedIn Learning: Communication Skills", category: "Certifications", year: "2023", icon: "💬", color: "from-blue-500/20 to-blue-600/10", issuer: "LinkedIn Learning" },
-  { id: 3, title: "LinkedIn Learning: Leadership Development", category: "Certifications", year: "2023", icon: "🚀", color: "from-purple-500/20 to-purple-600/10", issuer: "LinkedIn Learning" },
-  { id: 4, title: "LinkedIn Learning: Digital Tools", category: "Certifications", year: "2023", icon: "💻", color: "from-emerald-500/20 to-emerald-600/10", issuer: "LinkedIn Learning" },
-  { id: 5, title: "LinkedIn Learning: Academic Support Systems", category: "Certifications", year: "2024", icon: "🎓", color: "from-cyan-500/20 to-cyan-600/10", issuer: "LinkedIn Learning" },
-  { id: 6, title: "Training: Library Automation & ILMS", category: "Workshops", year: "2022", icon: "⚙️", color: "from-rose-500/20 to-rose-600/10", issuer: "Professional Development" },
-  { id: 7, title: "Training: Digital Library Management", category: "Workshops", year: "2022", icon: "🗄️", color: "from-indigo-500/20 to-indigo-600/10", issuer: "Professional Development" },
-  { id: 8, title: "Training: Advanced Research Methodology", category: "Workshops", year: "2023", icon: "📊", color: "from-teal-500/20 to-teal-600/10", issuer: "Professional Development" },
-  { id: 9, title: "Training: Bibliometric & Scientometric Analysis", category: "Workshops", year: "2023", icon: "📈", color: "from-pink-500/20 to-pink-600/10", issuer: "Professional Development" },
-  { id: 10, title: "Training: Academic Database Searching & Discovery", category: "Workshops", year: "2023", icon: "🔍", color: "from-orange-500/20 to-orange-600/10", issuer: "Professional Development" },
-  { id: 11, title: "Training: Conducting Information Literacy Programs", category: "Workshops", year: "2024", icon: "📖", color: "from-gray-500/20 to-gray-600/10", issuer: "Professional Development" },
-  { id: 12, title: "Training: Artificial Intelligence Applications in Libraries", category: "Workshops", year: "2024", icon: "🤖", color: "from-violet-500/20 to-violet-600/10", issuer: "Professional Development" },
+  { 
+    id: 1, 
+    title: "ICLIS 2024 – Best Paper Award", 
+    category: "Awards", 
+    year: "2024", 
+    icon: "🏆", 
+    color: "from-amber-500/20 to-yellow-500/10", 
+    issuer: "Jain University & Karnataka State Library Association (KALA)", 
+    image: "/cert_jain_best_paper_2024.png" 
+  },
+  { 
+    id: 2, 
+    title: "ICLIS 2025 – Paper Presentation", 
+    category: "Workshops", 
+    year: "2025", 
+    icon: "📜", 
+    color: "from-blue-500/20 to-blue-600/10", 
+    issuer: "Sri Lanka Library Association & University of Peradeniya", 
+    image: "/cert_iclis_2025.png" 
+  },
+  { 
+    id: 3, 
+    title: "Jain University 2024 – Paper Presentation", 
+    category: "Workshops", 
+    year: "2024", 
+    icon: "📝", 
+    color: "from-purple-500/20 to-purple-600/10", 
+    issuer: "Jain University & KALA", 
+    image: "/cert_jain_2024.png" 
+  },
+  { 
+    id: 4, 
+    title: "KHSLA 2025 – Paper Presentation", 
+    category: "Workshops", 
+    year: "2025", 
+    icon: "📊", 
+    color: "from-teal-500/20 to-teal-600/10", 
+    issuer: "Karnataka Health Sciences Library Association", 
+    image: "/cert_khsla_2025.png" 
+  },
+  { 
+    id: 5, 
+    title: "ISI 2017 – Paper Presentation", 
+    category: "Workshops", 
+    year: "2017", 
+    icon: "📚", 
+    color: "from-rose-500/20 to-rose-600/10", 
+    issuer: "Indian Statistical Institute, DRTC, Bangalore", 
+    image: "/cert_isi_2017.png" 
+  },
+  { 
+    id: 6, 
+    title: "KLE Society 2023 – NEP Syllabus Orientation", 
+    category: "Workshops", 
+    year: "2023", 
+    icon: "🏫", 
+    color: "from-orange-500/20 to-orange-600/10", 
+    issuer: "KLE Society's Degree College & Bangalore University", 
+    image: "/cert_kle_2023.png" 
+  },
+  { 
+    id: 7, 
+    title: "World Poetry Day 2025 – Contemporary Discourses", 
+    category: "Workshops", 
+    year: "2025", 
+    icon: "✍️", 
+    color: "from-gray-500/20 to-gray-600/10", 
+    issuer: "Jyothy Institute of Commerce and Management", 
+    image: "/cert_poetry_2025.png" 
+  },
+  { 
+    id: 8, 
+    title: "IPR Workshop 2025 – Organizing Committee Member", 
+    category: "Workshops", 
+    year: "2025", 
+    icon: "⚖️", 
+    color: "from-pink-500/20 to-pink-600/10", 
+    issuer: "Jyothy Institute of Commerce and Management & WEGROW", 
+    image: "/cert_ipr_appreciation_2025.png" 
+  },
+  { 
+    id: 9, 
+    title: "IIM Bangalore 2025 – Centre for Public Policy Lecture", 
+    category: "Workshops", 
+    year: "2025", 
+    icon: "🏛️", 
+    color: "from-indigo-500/20 to-indigo-600/10", 
+    issuer: "Indian Institute of Management Bangalore", 
+    image: "/cert_iimb_2025.png" 
+  },
+  { 
+    id: 10, 
+    title: "Librarian Guide 2024 – Redefining Libraries with Digital Tools", 
+    category: "Workshops", 
+    year: "2024", 
+    icon: "🛠️", 
+    color: "from-cyan-500/20 to-cyan-600/10", 
+    issuer: "Librarian Guide", 
+    image: "/cert_libguide_2024.png" 
+  },
+  { 
+    id: 11, 
+    title: "LinkedIn Learning: Communication Skills", 
+    category: "Certifications", 
+    year: "2023", 
+    icon: "💬", 
+    color: "from-emerald-500/20 to-emerald-600/10", 
+    issuer: "LinkedIn Learning" 
+  },
+  { 
+    id: 12, 
+    title: "LinkedIn Learning: Leadership Development", 
+    category: "Certifications", 
+    year: "2023", 
+    icon: "🚀", 
+    color: "from-cyan-500/20 to-cyan-600/10", 
+    issuer: "LinkedIn Learning" 
+  },
+  { 
+    id: 13, 
+    title: "LinkedIn Learning: Digital Tools", 
+    category: "Certifications", 
+    year: "2023", 
+    icon: "💻", 
+    color: "from-indigo-500/20 to-indigo-600/10", 
+    issuer: "LinkedIn Learning" 
+  },
+  { 
+    id: 14, 
+    title: "LinkedIn Learning: Academic Support Systems", 
+    category: "Certifications", 
+    year: "2024", 
+    icon: "🎓", 
+    color: "from-violet-500/20 to-violet-600/10", 
+    issuer: "LinkedIn Learning" 
+  },
 ];
 
 type Cert = typeof certifications[0];
@@ -79,7 +203,18 @@ export function Certifications() {
                   <ZoomIn size={24} className="text-white" />
                 </div>
 
-                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{cert.icon}</div>
+                {cert.image ? (
+                  <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-white/10 dark:border-gray-700/30 mb-3 shadow-inner bg-white">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={cert.image}
+                      alt={cert.title}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                ) : (
+                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{cert.icon}</div>
+                )}
                 <h4 className="text-sm font-semibold font-poppins text-gray-900 dark:text-white leading-snug mb-2">
                   {cert.title}
                 </h4>
@@ -109,7 +244,7 @@ export function Certifications() {
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ type: "spring", damping: 25 }}
               onClick={(e) => e.stopPropagation()}
-              className={`relative bg-gradient-to-br ${selected.color} border border-white/20 rounded-3xl p-10 max-w-sm w-full text-center shadow-2xl`}
+              className={`relative bg-gradient-to-br ${selected.color} border border-white/20 rounded-3xl p-6 md:p-8 ${selected.image ? "max-w-2xl" : "max-w-sm"} w-full text-center shadow-2xl`}
             >
               <button
                 onClick={() => setSelected(null)}
@@ -118,7 +253,18 @@ export function Certifications() {
                 <X size={16} />
               </button>
 
-              <div className="text-8xl mb-6">{selected.icon}</div>
+              {selected.image ? (
+                <div className="relative w-full aspect-[4/3] mb-6 rounded-xl overflow-hidden border border-white/10 dark:border-gray-800/20 shadow-md bg-white">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={selected.image}
+                    alt={selected.title}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              ) : (
+                <div className="text-8xl mb-6">{selected.icon}</div>
+              )}
               <span className="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-primary-100 text-primary-700 dark:bg-primary-900/40 dark:text-primary-300 mb-4">
                 {selected.category}
               </span>
